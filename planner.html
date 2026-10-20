@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Planner | Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container nav-container">
+        <a class="logo" href="index.html">MyPortfolio</a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a class="active" href="planner.html">Academic Planner</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-banner">
+        <h1>Academic Planner</h1>
+        <p>Organize your assignments, studies, and academic goals</p>
+    </section>
+
+    <section class="section container">
+        <div class="planner-card">
+            <h2>My Academic Tasks</h2>
+            <p>
+                Enter a task below and click the Add Task button.
+                You can mark tasks as completed or delete them.
+            </p>
+
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-input">Task description</label>
+                    <input
+                        class="task-input"
+                        type="text"
+                        id="task-input"
+                        placeholder="e.g. Complete HTML assignment"
+                        maxlength="150"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="task-date">Due date (optional)</label>
+                    <input type="date" id="task-date">
+                </div>
+
+                <button class="btn" type="submit">Add Task</button>
+                <p id="task-message" class="message" role="status"></p>
+            </form>
+
+            <div class="task-stats" aria-live="polite">
+                <span>Total: <strong id="total-tasks">0</strong></span>
+                <span>Completed: <strong id="completed-tasks">0</strong></span>
+                <span>Pending: <strong id="pending-tasks">0</strong></span>
+            </div>
+
+            <ul id="task-list" class="task-list"></ul>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 JIBRIL SAIDU | Student Portfolio Project</p>
+</footer>
+
+</body>
+</html>
